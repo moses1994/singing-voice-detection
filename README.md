@@ -11,3 +11,8 @@ For more vivid singing voice detection results video, please see here: <a href="
 
 
 It is noteworthy that after transfer learning, the CRNN model in the target task detected the “thanks” voice of the singer to the audience at the concert, at 4:39 seconds of the fourth song named “Mote.wav”. However, the baseline system did not detect it. This may be due to the speech data in the original task has voice samples related to "thank you", and after transfer learning, the CRNN model in the target task absorbed these knowledge.
+
+
+Please feel free to contact me if you have any questions.
+
+Mail: hyb@bupt.edu.cn
