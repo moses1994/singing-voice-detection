@@ -1,4 +1,4 @@
-Here is the supplementary page of the paper: Transfer Learning for Improving Singing Voice Detection in Polyphonic Music.
+Here is the supplementary page of the paper: Transfer Learning for Improving Singing Voice Detection in Polyphonic Instrumental Music.
 
 
 There are detailed files in the folders.
