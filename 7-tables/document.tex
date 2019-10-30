@@ -1,0 +1,174 @@
+\documentclass{article}
+\usepackage{amsmath,graphicx}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{caption, tabularx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{array}  % 对齐
+\usepackage{booktabs} 
+\usepackage{multirow}
+\usepackage{makecell}
+
+\makeatletter
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\makeatother
+
+\begin{document}
+	
+\begin{table}[b]\footnotesize
+	% 表格标题的距离 above设置标题上面的距离，below设置标题下面的距离
+	\setlength{\abovecaptionskip}{-0cm}   %表格和标题之间的距离
+	\setlength{\belowcaptionskip}{-0.35cm}   %???????????????????
+	\renewcommand\tabcolsep{0.5pt} 
+	%对于一个大的表格，可用 \setlength{\tabcolsep}{1pt}来减少表格的列间距离；也可用\resizebox{!}{5cm}{\begin{tabular} ... \end{tabular}}把整个表格当作一个图形
+	\centering
+	\caption{The results of two different transfer modes.}
+	%\begin{tabular}{c|c|c|c|c}
+	\begin{tabular}{p{2.6cm}<{\centering}|p{1.3cm}<{\centering}|p{1.5cm}<{\centering}|p{1.3cm}<{\centering}|p{1.5cm}<{\centering}}
+		%1.5cm是Entire CNN 调整距离
+		%p{1.345cm}<{\centering} 调整后数据居中
+		\hline
+		\multirow{2}{*}{\makecell[c]{\textbf{\textsl{Transferred layer}}}}  & \multicolumn{2}{c|}{\textbf{\textsl{{Fixed}}}} & \multicolumn{2}{c}{\textbf{\textsl{Fine-tuning}}}  \\
+		\cline{2-5}
+		& \textsl{F-score} & \textsl{N.params} & \textsl{F-score} & \textsl{N.params} \\
+		\hline 		
+		%\hline
+		\textsl{$L_1$} & 91.9\% & 20.58\textsl{K} & \textbf{93.2\%} & 20.72\textsl{K} \\
+		%\hline
+		\textsl{$L_2$} & 91.7\% & 13.33\textsl{K}  & 92.0\% & 20.72\textsl{K} \\
+		%\hline
+		\textsl{$L_3$} & 91.1\% & 13.33\textsl{K}  & 91.7\% & 20.72\textsl{K} \\
+		\textsl{$L_{all}$} & 82.6\% & 5.79\textsl{K} & 92.3\% & 20.72\textsl{K} \\
+		\hline
+	\end{tabular}
+	\label{tab:two_modes}
+\end{table}  
+
+
+\begin{table}[b]\footnotesize
+	% 表格标题的距离 above设置标题上面的距离，below设置标题下面的距离
+	\setlength{\abovecaptionskip}{0cm}   %表格和标题之间的距离
+	\setlength{\belowcaptionskip}{-0.5cm}   %???????????????????
+	\renewcommand\tabcolsep{0.5pt} 
+	%对于一个大的表格，可用 \setlength{\tabcolsep}{1pt}来减少表格的列间距离；也可用\resizebox{!}{5cm}{\begin{tabular} ... \end{tabular}}把整个表格当作一个图形
+	\centering
+	\caption{The results of two different transfer strategies.}
+	%\begin{tabular}{|c|c|c|c|c|c|c|}
+	\begin{tabular}{p{1.6cm}<{\centering}|p{1cm}<{\centering}p{1cm}<{\centering}p{1cm}<{\centering}|p{1cm}<{\centering}p{1cm}<{\centering}p{1cm}<{\centering}}
+		%1.5cm是Entire CNN 调整距离
+		%p{1.345cm}<{\centering} 调整后数据居中
+		\hline
+		\multirow{2}{*}{\makecell[c]{ Transfer \\ layer No.}}  & \multicolumn{3}{c|}{\textsl{Fixed}} & \multicolumn{3}{c}{\textsl{Fine-tuning}}  \\
+		\cline{2-7}
+		& \textsl{P} & \textsl{R} & \textsl{F-score} & \textsl{P} & \textsl{R} & \textsl{F-score} \\
+		\hline 
+		\textsl{Entire} & 79.3\% & 86.2\% & 82.6\% & 89.0\% & 95.7\% & 92.3\% \\
+		%\hline
+		\textsl{$L_1$} & 88.9\% & 95.1\% & 91.9\% & \textbf{90.1\%} & \textbf{96.0\%} & \textbf{93.2\%} \\
+		%\hline
+		\textsl{$L_2$} & 88.2\% & 95.5\% & 91.7\% & 88.8\% & 95.5\% & 92.0\% \\
+		%\hline
+		\textsl{$L_3$} & 87.4\% & 95.1\% & 91.1\% & 88.5\% & 95.2\% & 91.7\% \\
+		\hline
+	\end{tabular}
+	\label{tab:two_modes}
+\end{table}
+
+
+
+
+
+
+\begin{table}[ht]\footnotesize
+	% 表格标题的距离 above设置标题上面的距离，below设置标题下面的距离
+	\setlength{\abovecaptionskip}{-0cm}   %表格和标题之间的距离
+	\setlength{\belowcaptionskip}{-0.18cm}   %???????????????????
+	\renewcommand\tabcolsep{0.5pt} 
+	%对于一个大的表格，可用 \setlength{\tabcolsep}{1pt}来减少表格的列间距离；也可用\resizebox{!}{5cm}{\begin{tabular} ... \end{tabular}}把整个表格当作一个图形
+	\centering
+	\caption{The detection results in frame-level.}
+	\begin{tabular}
+		{ p{1.3cm}<{\centering}|
+			p{0.75cm}<{\centering}
+			p{0.75cm}<{\centering}|
+			p{0.75cm}<{\centering}
+			p{0.75cm}<{\centering}
+			p{0.78cm}<{\centering}|
+			p{0.75cm}<{\centering}
+			p{0.75cm}<{\centering}
+			p{0.78cm}<{\centering}}
+		\hline
+		\multirow{2}{*}{\makecell[c]{ Polyphonic \\ song}}  & \multicolumn{2}{c|}{\textsl{Frames}}
+		& \multicolumn{3}{c|}{\textsl{Baseline}}
+		& \multicolumn{3}{c}{\textsl{Transfer learning}}  \\
+		\cline{2-9}
+		& \textsl{off} & \textsl{on} & \textsl{P (\%)} & \textsl{R (\%)} & \textsl{F (\%)} & \textsl{P (\%)} & \textsl{R (\%)} & \textsl{F (\%)} \\
+		\hline 
+		\textsl{No.1} & 3390 & 6098  & 79.6 & 91.4 & 85.1 & 84.1 & 91.8 & \textbf{87.8} \\
+		\textsl{No.2} & 5844  & 8366  & 96.4  &  93.2  &  89.7  & 88.4 & 92.9  & \textbf{90.6}  \\
+		\textsl{No.3}  & 2744 & 4793 &  84.5  &  92.3  &  88.2  & 86.5 & 91.7 & \textbf{89.1}  \\
+		\textsl{No.4}  & 6423 & 2911 &  89.5 & 94.4 & \textbf{91.9} & 86.7 & 93.7 &  90.1 \\
+		\textsl{No.5}  & 1475 & 4561 & 90.2  &  94.3  &  92.2  & 91.0 & 97.8 &  \textbf{94.2} \\
+		\textsl{No.6}  & 4945 & 5754 &  86.5  &  91.6  & 89.0  & 89.3 & 96.5 & \textbf{92.8}  \\
+		\textsl{No.7}  & 3218 & 7220 &  96.5  & 95.7  & 96.1  & 95.8 & 97.7 & \textbf{96.8}  \\
+		\textsl{No.8}  & 2458  & 9922 &  66.6  & 89.9  & 76.5  & 70.8 & 91.4 & \textbf{79.8}  \\
+		\textsl{No.9}  & 2938  & 5384 & 82.8  &  85.4 & 84.1  & 92.9 & 97.3 & \textbf{95.1}  \\
+		\textsl{No.10}  & 4166 & 7476 &  83.0 & 90.0  & 86.3  & 89.6 & 98.6 & \textbf{93.9}  \\
+		\hline
+	\end{tabular}
+	\label{tab:10songs}
+\end{table}
+
+
+
+
+\begin{table}[ht]\footnotesize
+	% 表格标题的距离 above设置标题上面的距离，below设置标题下面的距离
+	\setlength{\abovecaptionskip}{0.1cm}   %表格和标题之间的距离
+	\setlength{\belowcaptionskip}{-0.2cm}   %???????????????????
+	\renewcommand\tabcolsep{0.5pt} 
+	%对于一个大的表格，可用 \setlength{\tabcolsep}{1pt}来减少表格的列间距离；也可用\resizebox{!}{5cm}{\begin{tabular} ... \end{tabular}}把整个表格当作一个图形
+	\centering
+	\caption{The detection results in frame-level.}
+	\begin{tabular}
+		{ p{1.6cm}<{\centering}|
+			p{0.80cm}<{\centering}
+			p{0.80cm}<{\centering}|
+			p{0.80cm}<{\centering}
+			p{0.80cm}<{\centering}
+			p{0.78cm}<{\centering}|
+			p{0.80cm}<{\centering}
+			p{0.80cm}<{\centering}
+			p{0.80cm}<{\centering}}
+		\hline
+		\multirow{2}{*}{\makecell[c]{ \textbf{\textsl{Polyphonic}} \\ \textbf{\textsl{song}}}}  
+		& \multicolumn{2}{c|}{\textbf{\textsl{Frames}}}
+		& \multicolumn{3}{c|}{\textbf{\textsl{{Baseline}}}}
+		& \multicolumn{3}{c}{\textbf{\textsl{{Transfer learning}}}}  \\
+		\cline{2-9}
+		& \textsl{off} & \textsl{on} & \textsl{P (\%)} & \textsl{R (\%)} & \textsl{F (\%)} & \textsl{P (\%)} & \textsl{R (\%)} & \textsl{F (\%)} \\
+		\hline 
+		\textsl{No.1}  & 2938  & 5384 & 82.8  &  85.4 & 84.1  & 92.9 & 97.3 & \textbf{95.1}  \\
+		\textsl{No.2}  & 4166 & 7476 &  83.0 & 90.0  & 86.3  & 89.6 & 98.6 & \textbf{93.9} \\
+		%\textsl{No.3}  & 4945 & 5754 &  86.5  &  91.6  & 89.0  & 89.3 & 96.5 & \textbf{92.8}  \\
+		\hline
+		\multicolumn{1}{c}{\textsl{$\bigcdot\bigcdot\bigcdot$}}  
+		& {$\bigcdot\bigcdot\bigcdot$} & 
+		\multicolumn{1}{c}{\textsl{$\bigcdot\bigcdot\bigcdot$}} 
+		& {$\bigcdot\bigcdot\bigcdot$}  &  {$\bigcdot\bigcdot\bigcdot$} 
+		& \multicolumn{1}{c}{\textsl{$\bigcdot\bigcdot\bigcdot$}}
+		& {$\bigcdot\bigcdot\bigcdot$} 
+		& {$\bigcdot\bigcdot\bigcdot$} 
+		& {$\bigcdot\bigcdot\bigcdot$}  \\
+		\hline
+		\textsl{No.60}  & 3218 & 7220 &  96.5  & 95.7  & 96.1  & 95.8 & 97.7 & \textbf{96.8}  \\
+		\hline
+		\multicolumn{3}{c|}{\textsl{\textbf{Overall}}}  &  86.1  & 93.2  & 89.5  & 90.1 & 96.0 & \textbf{93.2}  \\
+		\hline
+	\end{tabular}
+	\label{tab:10songs}
+\end{table}
+
+\end{document}
