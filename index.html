@@ -1,0 +1,212 @@
+<style>
+audio {
+ max-width: 100%;
+}
+ .tab {
+ min-width: 100%;
+ }
+</style>
+<h1 align="center"> Transfer Learning for Improving Singing Voice Detection in Polyphonic Instrumental Music <p></p></h1>
+
+<div width="100%">
+
+<h2 align="left"><a name="part1">1. some synthesized audio clip samples in the source task</a><p></p></h2>
+            
+
+<table class="tab">
+<tr>
+<td><audio  controls><source src="1-synthesized-speech-plus-music-clips-samples-in-the-source-task/BAC009S0022W0166.wav"></audio></td>            
+<td><audio  controls><source src="1-synthesized-speech-plus-music-clips-samples-in-the-source-task/BAC009S0022W0167.wav"></audio></td>      
+<td><audio  controls><source src="1-synthesized-speech-plus-music-clips-samples-in-the-source-task/BAC009S0022W0170.wav"></audio></td>      
+<td><audio  controls><source src="1-synthesized-speech-plus-music-clips-samples-in-the-source-task/BAC009S0022W0218.wav"></audio></td>      
+<td><audio  controls><source src="1-synthesized-speech-plus-music-clips-samples-in-the-source-task/BAC009S0022W0219.wav"></audio></td> 
+</tr>
+<tr>      
+<td><audio  controls><source src="1-synthesized-speech-plus-music-clips-samples-in-the-source-task/BAC009S0022W0234.wav"></audio></td>            
+<td><audio  controls><source src="1-synthesized-speech-plus-music-clips-samples-in-the-source-task/BAC009S0022W0393.wav"></audio></td>      
+<td><audio  controls><source src="1-synthesized-speech-plus-music-clips-samples-in-the-source-task/BAC009S0022W0402.wav"></audio></td>      
+<td><audio  controls><source src="1-synthesized-speech-plus-music-clips-samples-in-the-source-task/BAC009S0022W0404.wav"></audio></td>      
+<td><audio  controls><source src="1-synthesized-speech-plus-music-clips-samples-in-the-source-task/BAC009S0022W0461.wav"></audio></td>  
+</tr>    
+</table>
+
+<h2 align="left"><a name="part2">2. some polyphonic music samples in the target task</a><p></p></h2>           
+<table class="tab">
+<tr>
+<td><audio  controls><source src="2-polyphonic-music-samples-in-the-target-task/BaiHuaGe_ZhouXuan-1.wav"></audio></td>    
+<td><audio  controls><source src="2-polyphonic-music-samples-in-the-target-task/zhuimengchizixin_GALA-1.wav"></audio></td>        
+<td><audio  controls><source src="2-polyphonic-music-samples-in-the-target-task/BaLuoBo_YiMing-1.wav"></audio></td>   
+<td><audio  controls><source src="2-polyphonic-music-samples-in-the-target-task/yekongzhongzuishanliangdexing_taopaojihua-1.wav"></audio></td>   
+<td><audio  controls><source src="2-polyphonic-music-samples-in-the-target-task/HaiKuoTianKong_LiWeiZhen-1.wav"></audio></td> 
+</tr>
+</table>
+
+</div> 
+
+<h2 align="left"><a name="part3">3. patterns of different filters in L<SUB>i</SUB>, for each subgraph, the x-axis is time (T) and the y-axis is frequency (F).</a><p></p></h2> 
+
+<div align="center">
+<img src="fig.4.png" width=50%/>
+</div>
+
+For more details on the filter patterns learned in the source task, please see here:
+For more details on the filter patterns learned in the target task, please see here:
+
+<h2 align="left"><a name="part3">3. some internal representations of feature maps</a><p></p></h2>   
+
+<h3 align="center"> polyphonic music clip: 1 <p></p></h3>
+<div align="center">
+<img src="3-internal-representations-of-feature-maps/music-clip-1-l1.png" width=33%/>
+<img src="3-internal-representations-of-feature-maps/music-clip-1-l2.png" width=33%/> 
+<img src="3-internal-representations-of-feature-maps/music-clip-1-l3.png" width=33%/>
+</div>  
+
+<h3 align="center"> polyphonic music clip: 2 <p></p></h3>
+<div align="center">
+<img src="3-internal-representations-of-feature-maps/music-clip-2-l1.png" width=33%/>
+<img src="3-internal-representations-of-feature-maps/music-clip-2-l2.png" width=33%/> 
+<img src="3-internal-representations-of-feature-maps/music-clip-2-l3.png" width=33%/>
+</div>   
+
+<h3 align="center"> polyphonic music clip: 3 <p></p></h3>
+<div align="center">
+<img src="3-internal-representations-of-feature-maps/music-clip-3-l1.png" width=33%/>
+<img src="3-internal-representations-of-feature-maps/music-clip-3-l2.png" width=33%/> 
+<img src="3-internal-representations-of-feature-maps/music-clip-3-l3.png" width=33%/>
+</div>  
+
+<h3 align="center"> polyphonic music clip: 4 <p></p></h3>
+<div align="center">
+<img src="3-internal-representations-of-feature-maps/music-clip-4-l1.png" width=33%/>
+<img src="3-internal-representations-of-feature-maps/music-clip-4-l2.png" width=33%/> 
+<img src="3-internal-representations-of-feature-maps/music-clip-4-l3.png" width=33%/>
+</div>   
+
+<h3 align="center"> polyphonic music clip: 5 <p></p></h3>
+<div align="center">
+<img src="3-internal-representations-of-feature-maps/music-clip-5-l1.png" width=33%/>
+<img src="3-internal-representations-of-feature-maps/music-clip-5-l2.png" width=33%/> 
+<img src="3-internal-representations-of-feature-maps/music-clip-5-l3.png" width=33%/>
+</div>    
+
+<h3 align="center"> polyphonic music clip: 6 <p></p></h3>
+<div align="center">
+<img src="3-internal-representations-of-feature-maps/music-clip-6-l1.png" width=33%/>
+<img src="3-internal-representations-of-feature-maps/music-clip-6-l2.png" width=33%/> 
+<img src="3-internal-representations-of-feature-maps/music-clip-6-l3.png" width=33%/>
+</div>    
+
+<h3 align="center"> polyphonic music clip: 7 <p></p></h3>
+<<div align="center">
+<img src="3-internal-representations-of-feature-maps/music-clip-7-l1.png" width=33%/>
+<img src="3-internal-representations-of-feature-maps/music-clip-7-l2.png" width=33%/> 
+<img src="3-internal-representations-of-feature-maps/music-clip-7-l3.png" width=33%/>
+</div>    
+
+<h3 align="center"> polyphonic music clip: 8 <p></p></h3>
+<div align="center">
+<img src="3-internal-representations-of-feature-maps/music-clip-8-l1.png" width=33%/>
+<img src="3-internal-representations-of-feature-maps/music-clip-8-l2.png" width=33%/> 
+<img src="3-internal-representations-of-feature-maps/music-clip-8-l3.png" width=33%/>
+</div>  
+
+<h3 align="center"> polyphonic music clip: 9 <p></p></h3>
+<div align="center">
+<img src="3-internal-representations-of-feature-maps/music-clip-9-l1.png" width=33%/>
+<img src="3-internal-representations-of-feature-maps/music-clip-9-l2.png" width=33%/> 
+<img src="3-internal-representations-of-feature-maps/music-clip-9-l3.png" width=33%/>
+</div>   
+
+<h3 align="center"> polyphonic music clip: 10 <p></p></h3>
+<div align="center">
+<img src="3-internal-representations-of-feature-maps/music-clip-10-l1.png" width=33%/>
+<img src="3-internal-representations-of-feature-maps/music-clip-10-l2.png" width=33%/> 
+<img src="3-internal-representations-of-feature-maps/music-clip-10-l3.png" width=33%/>
+</div>   
+
+<h3 align="center"> polyphonic music clip: 11 <p></p></h3>
+<div align="center">
+<img src="3-internal-representations-of-feature-maps/music-clip-11-l1.png" width=33%/>
+<img src="3-internal-representations-of-feature-maps/music-clip-11-l2.png" width=33%/> 
+<img src="3-internal-representations-of-feature-maps/music-clip-11-l3.png" width=33%/>
+</div>   
+
+<h3 align="center"> polyphonic music clip: 12 <p></p></h3>
+<div align="center">
+<img src="3-internal-representations-of-feature-maps/music-clip-12-l1.png" width=33%/>
+<img src="3-internal-representations-of-feature-maps/music-clip-12-l2.png" width=33%/> 
+<img src="3-internal-representations-of-feature-maps/music-clip-12-l3.png" width=33%/>
+</div>     
+
+<h2 align="left"><a name="part4">4. Final singing voice detection results for some polyphonic songs</a><p></p></h2> 
+
+<h3> In these videos, the middle black vertical line represents the current playback position, the blue lines indicate the raw audio waves, the yellow block represents the singing voice activity, and the gray block indicates the non-singing area. <p></p></h3>
+  
+<h3 align="center"> Song 1: Gaosuwo.wav <p></p></h3>
+<div align="center">
+<video width=95%/ controls>
+<source src="4-videos-of-final-test-results/interspeech2019-gaosuwo.mp4" type="video/mp4">   
+</video>
+</div>  
+
+<h3 align="center"> Song 2: Haoxianghaoxiang.wav <p></p></h3>
+<div align="center">
+<video width=95%/ controls>
+<source src="4-videos-of-final-test-results/interspeech2019-haoxianghaoxiang.mp4" type="video/mp4">   
+</video>
+</div>  
+
+<h3 align="center"> Song 3: Duolaimi.wav <p></p></h3>
+<div align="center">
+<video width=95%/ controls>
+<source src="4-videos-of-final-test-results/interspeech2019-duolaimi.mp4" type="video/mp4">   
+</video>
+</div>  
+
+<h3 align="center"> Song 4: Mote.wav <p></p></h3>
+<div align="center">
+<video width=95%/ controls>
+<source src="4-videos-of-final-test-results/interspeech2019-mote.mp4" type="video/mp4">   
+</video>
+</div>    
+
+
+
+
+<h3 align="center"> It is noteworthy that after transfer learning, the CRNN model in the target task detected the “thanks” voice of the singer to the audience at the concert, at 4:39 seconds of the fourth song named “Mote.wav”. However, the baseline system did not detect it. This may be due to the speech data in the original task has voice samples related to "thank you", and after transfer learning, the CRNN model in the target task absorbed these knowledge.
+ <p></p></h3>
+
+
+
+
+
+
+<!--
+<video width="1600" height="720" controls>
+
+第二张
+
+<div align="center"><img src="3-internal-representations-of-feature-maps/music-clip-1-l1.png" width="350" /></div>
+
+第三张
+
+<img src="3-internal-representations-of-feature-maps/music-clip-1-l1.png" style="transform:scale(0.5)" /><br/> 
+
+<img src="3-internal-representations-of-feature-maps/music-clip-1-l1.png" style="transform:scale(0.8)" /><br/> 
+
+<img src="3-internal-representations-of-feature-maps/music-clip-1-l1.png" style="transform:scale(1)" /><br/> 
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+

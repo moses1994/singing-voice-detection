@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2018.1.29)  30 OCT 2019 12:14
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (MiKTeX 2.9) (preloaded format=xelatex 2018.1.29)  30 OCT 2019 19:50
 entering extended mode
 **document.tex
 (D:\github\singing-voice-detection\7-tables\document.tex
@@ -198,7 +198,7 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 )
 (D:\github\singing-voice-detection\7-tables\document.aux
 
-LaTeX Warning: Label `tab:two_modes' multiply defined.
+LaTeX Warning: Label `tab:10songs' multiply defined.
 
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -240,8 +240,8 @@ Requested font "cmbxsl10" at 8.0pt
 Requested font "cmsl8" at 8.0pt
  -> cmsl8
 
-Overfull \hbox (4.20915pt too wide) in paragraph at lines 103--103
- []|[]| 
+Overfull \hbox (59.84843pt too wide) in paragraph at lines 29--55
+ [][] 
  []
 
 [1] (D:\github\singing-voice-detection\7-tables\document.aux)
@@ -252,10 +252,10 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  2651 strings out of 430478
  36039 string characters out of 3191502
- 117432 words of memory out of 3000000
+ 111432 words of memory out of 3000000
  5798 multiletter control sequences out of 15000+200000
  7160 words of font info for 26 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 36i,17n,38p,222b,410s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,17n,38p,222b,408s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on document.pdf (1 page).
