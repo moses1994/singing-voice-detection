@@ -49,94 +49,41 @@ audio {
 <img src="fig.4.png" width=50%/>
 </div>
 
-For more details on the filter patterns learned in the source task, please see here:
-For more details on the filter patterns learned in the target task, please see here:
+<h3 align="center"> For more details on the filter patterns learned in the source task, please <a href="https://github.com/moses1994/singing-voice-detection/tree/master/3-filter-patterns-learned-in-source-task" target="https://github.com/moses1994/singing-voice-detection/tree/master/3-filter-patterns-learned-in-source-task">visit here</a>
+ : https://github.com/moses1994/singing-voice-detection/tree/master/3-filter-patterns-learned-in-source-task
+<p></p></h3>
+ 
+ 
+<h3 align="center"> For more details on the filter patterns learned in the target task, please <a href="https://github.com/moses1994/singing-voice-detection/tree/master/3-filter-patterns-learned-in-target-task" target="https://github.com/moses1994/singing-voice-detection/tree/master/3-filter-patterns-learned-in-target-task">visit here</a>
+ : https://github.com/moses1994/singing-voice-detection/tree/master/3-filter-patterns-learned-in-target-task
+<p></p></h3>
 
-<h2 align="left"><a name="part3">3. some internal representations of feature maps</a><p></p></h2>   
+<h2 align="left"><a name="part3">4. some internal representations of feature maps in audio clips</a><p></p></h2>   
+
+<h3 align="left"> 
+To gain deeper insights of the proposed method, we visualized the internal representations of the fixed and the fine-tuning convolutional layers based on the same song clip in the target task. From top to bottom in each graph, they are: 1) log mel spectrogram of the audio clip; 2) the output of L<SUB>i</SUB> in Fine-tuning mode in the target task; 3) the output of L<SUB>i</SUB> in Fixed mode in the target task.<p></p>
+
+Due to the limitation of space, the internal representations of one feature map, which was randomly selected from the feature maps, In these Figures, L<SUB>1</SUB> learns more obvious basic local features of the input spectrogram than L<SUB>2</SUB> and L<SUB>3</SUB>. The L<SUB>1</SUB> after fine-tuning, whose representations of high frequency harmonics are abundant, learns more high frequency harmonic components than that of fixed one. The fine-tuned and retrained L<SUB>1</SUB> preserves features of the input audio clip better and matches the target domain more closely<p></p>
+
+For more samples about the internal representations learned in the target task, please <a href="https://github.com/moses1994/singing-voice-detection/tree/master/5-internal-representations-of-feature-maps" 
+target="https://github.com/moses1994/singing-voice-detection/tree/master/5-internal-representations-of-feature-maps">visit here</a>
+ : https://github.com/moses1994/singing-voice-detection/tree/master/5-internal-representations-of-feature-maps
+<p></p></h3>
 
 <h3 align="center"> polyphonic music clip: 1 <p></p></h3>
 <div align="center">
-<img src="3-internal-representations-of-feature-maps/music-clip-1-l1.png" width=33%/>
-<img src="3-internal-representations-of-feature-maps/music-clip-1-l2.png" width=33%/> 
-<img src="3-internal-representations-of-feature-maps/music-clip-1-l3.png" width=33%/>
+<img src="5-internal-representations-of-feature-maps/music-clip-1-l1.png" width=33%/>
+<img src="5-internal-representations-of-feature-maps/music-clip-1-l2.png" width=33%/> 
+<img src="5-internal-representations-of-feature-maps/music-clip-1-l3.png" width=33%/>
 </div>  
 
 <h3 align="center"> polyphonic music clip: 2 <p></p></h3>
 <div align="center">
-<img src="3-internal-representations-of-feature-maps/music-clip-2-l1.png" width=33%/>
-<img src="3-internal-representations-of-feature-maps/music-clip-2-l2.png" width=33%/> 
-<img src="3-internal-representations-of-feature-maps/music-clip-2-l3.png" width=33%/>
-</div>   
-
-<h3 align="center"> polyphonic music clip: 3 <p></p></h3>
-<div align="center">
-<img src="3-internal-representations-of-feature-maps/music-clip-3-l1.png" width=33%/>
-<img src="3-internal-representations-of-feature-maps/music-clip-3-l2.png" width=33%/> 
-<img src="3-internal-representations-of-feature-maps/music-clip-3-l3.png" width=33%/>
+<img src="5-internal-representations-of-feature-maps/music-clip-3-l1.png" width=33%/>
+<img src="5-internal-representations-of-feature-maps/music-clip-3-l2.png" width=33%/> 
+<img src="5-internal-representations-of-feature-maps/music-clip-3-l3.png" width=33%/>
 </div>  
 
-<h3 align="center"> polyphonic music clip: 4 <p></p></h3>
-<div align="center">
-<img src="3-internal-representations-of-feature-maps/music-clip-4-l1.png" width=33%/>
-<img src="3-internal-representations-of-feature-maps/music-clip-4-l2.png" width=33%/> 
-<img src="3-internal-representations-of-feature-maps/music-clip-4-l3.png" width=33%/>
-</div>   
-
-<h3 align="center"> polyphonic music clip: 5 <p></p></h3>
-<div align="center">
-<img src="3-internal-representations-of-feature-maps/music-clip-5-l1.png" width=33%/>
-<img src="3-internal-representations-of-feature-maps/music-clip-5-l2.png" width=33%/> 
-<img src="3-internal-representations-of-feature-maps/music-clip-5-l3.png" width=33%/>
-</div>    
-
-<h3 align="center"> polyphonic music clip: 6 <p></p></h3>
-<div align="center">
-<img src="3-internal-representations-of-feature-maps/music-clip-6-l1.png" width=33%/>
-<img src="3-internal-representations-of-feature-maps/music-clip-6-l2.png" width=33%/> 
-<img src="3-internal-representations-of-feature-maps/music-clip-6-l3.png" width=33%/>
-</div>    
-
-<h3 align="center"> polyphonic music clip: 7 <p></p></h3>
-<<div align="center">
-<img src="3-internal-representations-of-feature-maps/music-clip-7-l1.png" width=33%/>
-<img src="3-internal-representations-of-feature-maps/music-clip-7-l2.png" width=33%/> 
-<img src="3-internal-representations-of-feature-maps/music-clip-7-l3.png" width=33%/>
-</div>    
-
-<h3 align="center"> polyphonic music clip: 8 <p></p></h3>
-<div align="center">
-<img src="3-internal-representations-of-feature-maps/music-clip-8-l1.png" width=33%/>
-<img src="3-internal-representations-of-feature-maps/music-clip-8-l2.png" width=33%/> 
-<img src="3-internal-representations-of-feature-maps/music-clip-8-l3.png" width=33%/>
-</div>  
-
-<h3 align="center"> polyphonic music clip: 9 <p></p></h3>
-<div align="center">
-<img src="3-internal-representations-of-feature-maps/music-clip-9-l1.png" width=33%/>
-<img src="3-internal-representations-of-feature-maps/music-clip-9-l2.png" width=33%/> 
-<img src="3-internal-representations-of-feature-maps/music-clip-9-l3.png" width=33%/>
-</div>   
-
-<h3 align="center"> polyphonic music clip: 10 <p></p></h3>
-<div align="center">
-<img src="3-internal-representations-of-feature-maps/music-clip-10-l1.png" width=33%/>
-<img src="3-internal-representations-of-feature-maps/music-clip-10-l2.png" width=33%/> 
-<img src="3-internal-representations-of-feature-maps/music-clip-10-l3.png" width=33%/>
-</div>   
-
-<h3 align="center"> polyphonic music clip: 11 <p></p></h3>
-<div align="center">
-<img src="3-internal-representations-of-feature-maps/music-clip-11-l1.png" width=33%/>
-<img src="3-internal-representations-of-feature-maps/music-clip-11-l2.png" width=33%/> 
-<img src="3-internal-representations-of-feature-maps/music-clip-11-l3.png" width=33%/>
-</div>   
-
-<h3 align="center"> polyphonic music clip: 12 <p></p></h3>
-<div align="center">
-<img src="3-internal-representations-of-feature-maps/music-clip-12-l1.png" width=33%/>
-<img src="3-internal-representations-of-feature-maps/music-clip-12-l2.png" width=33%/> 
-<img src="3-internal-representations-of-feature-maps/music-clip-12-l3.png" width=33%/>
-</div>     
 
 <h2 align="left"><a name="part4">4. Final singing voice detection results for some polyphonic songs</a><p></p></h2> 
 
@@ -186,15 +133,15 @@ For more details on the filter patterns learned in the target task, please see h
 
 第二张
 
-<div align="center"><img src="3-internal-representations-of-feature-maps/music-clip-1-l1.png" width="350" /></div>
+<div align="center"><img src="5-internal-representations-of-feature-maps/music-clip-1-l1.png" width="350" /></div>
 
 第三张
 
-<img src="3-internal-representations-of-feature-maps/music-clip-1-l1.png" style="transform:scale(0.5)" /><br/> 
+<img src="5-internal-representations-of-feature-maps/music-clip-1-l1.png" style="transform:scale(0.5)" /><br/> 
 
-<img src="3-internal-representations-of-feature-maps/music-clip-1-l1.png" style="transform:scale(0.8)" /><br/> 
+<img src="5-internal-representations-of-feature-maps/music-clip-1-l1.png" style="transform:scale(0.8)" /><br/> 
 
-<img src="3-internal-representations-of-feature-maps/music-clip-1-l1.png" style="transform:scale(1)" /><br/> 
+<img src="5-internal-representations-of-feature-maps/music-clip-1-l1.png" style="transform:scale(1)" /><br/> 
 
 -->
 
