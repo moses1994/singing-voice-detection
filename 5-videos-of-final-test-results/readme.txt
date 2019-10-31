@@ -1,1 +1,3 @@
+In these videos, the middle black vertical line represents the current playback position, the blue lines indicate the raw audio waves, the yellow block represents the singing voice activity, and the gray block indicates the non-singing area.
 
+It is noteworthy that in "mote.mp4" after transfer learning, the CRNN model in the target task detected the “thanks” voice of the singer to the audience at the concert, at 4:39 seconds of the fourth song named “Mote.wav”. However, the baseline system did not detect it. This may be due to the speech data in the original task has voice samples related to "thank you", and after transfer learning, the CRNN model in the target task absorbed these knowledge.
